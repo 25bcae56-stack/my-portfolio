@@ -8,7 +8,6 @@ DB_NAME = 'contacts.db'
 def init_db():
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
-    # Table name is strictly 'contacts'
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS contacts (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,6 +19,9 @@ def init_db():
     ''')
     conn.commit()
     conn.close()
+
+# CRITICAL: Initialize the database
+init_db()
 
 @app.route('/')
 def index():
@@ -53,11 +55,6 @@ def get_contacts():
         return jsonify([])
 
 if __name__ == "__main__":
-    # This gets the port from Render, or uses 5000 locally
     port = int(os.environ.get("PORT", 5000))
-    
-    # Change '0.0.0.0' to '127.0.0.1' for Windows local testing
-    # Note: Render NEEDS '0.0.0.0', so we will use a small trick:
     host = '0.0.0.0' if os.environ.get("PORT") else '127.0.0.1'
-    
     app.run(host=host, port=port, debug=True)
