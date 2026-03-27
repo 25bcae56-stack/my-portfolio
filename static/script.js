@@ -48,7 +48,7 @@ function closePopup() {
 // Load Messages from SQLite
 async function loadMessages() {
     try {
-        const response = await fetch('/get_messages');
+        const response = await fetch('/get_contacts');
         const messages = await response.json();
         const feed = document.getElementById('messageFeed');
         
