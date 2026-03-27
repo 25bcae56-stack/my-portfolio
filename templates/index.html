@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S PRITAM | CREATIVE DEVELOPER</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;900&family=JetBrains+Mono&family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Background Doodles -->
+    <div class="doodle-container">
+        <svg class="doodle d-arrow" viewBox="0 0 100 100"><path d="M10,50 Q40,10 90,50 M70,30 L90,50 L70,70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="doodle d-circle" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="5,5"/></svg>
+        <svg class="doodle d-zigzag" viewBox="0 0 100 20"><path d="M0,10 L20,0 L40,10 L60,0 L80,10 L100,0" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </div>
+
+    <!-- Aesthetic Success Popup -->
+    <div id="successPopup" class="popup-overlay hidden">
+        <div class="popup-content aesthetic-popup">
+            <div class="popup-stickers">
+                <span class="p-sticker">✨</span>
+                <span class="p-sticker">🎉</span>
+                <span class="p-sticker">💌</span>
+                <span class="p-sticker">🚀</span>
+            </div>
+            <div class="popup-icon-wrap">
+                <div class="popup-icon">✓</div>
+            </div>
+            <h2>MESSAGE SENT!</h2>
+            <p>Successfully transmitted.<br>I'll reach out to you soon!</p>
+            <button class="popup-btn" onclick="closePopup()">GOT IT</button>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">S.<span>PRITAM</span></div>
+        <div class="nav-links">
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="display-text reveal-up">DESIGNING<br><span class="outline">THE FUTURE.</span></h1>
+            <p class="hero-sub reveal-up">BCA Student // Developer // Content Creator</p>
+            <button class="btn-primary reveal-up" onclick="document.getElementById('contact').scrollIntoView()">GET IN TOUCH</button>
+        </div>
+        <div class="sticker s1">👾</div>
+        <div class="sticker s2">🚀</div>
+        <div class="sticker s3">⚡</div>
+    </header>
+
+    <section id="about" class="reveal-left">
+        <div class="container">
+            <div class="about-grid">
+                <div class="image-box">
+                    <img src="{{ url_for('static', filename='myphoto.jpeg') }}" alt="S Pritam" class="main-img">
+                    <div class="pencil-sketch">CREATIVE_ARCHITECT</div>
+                </div>
+                <div class="text-box">
+                    <span class="tag">01. BIOGRAPHY</span>
+                    <h2 class="title">I AM S PRITAM.</h2>
+                    <p class="desc">Currently a 2nd-semester BCA student, I am a multidisciplinary creator driven by the perfect blend of logic and aesthetics. My world revolves around building robust code and crafting cinematic visual narratives.</p>
+                    <p class="desc">I specialize in <b>C, C++, and Python</b>, and I am highly proficient in creative softwares like <b>Adobe Premiere Pro, DaVinci Resolve, and CapCut</b>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="reveal-right">
+        <div class="container">
+            <span class="tag">02. ARSENAL</span>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <div class="skill-header"><i data-lucide="code-2"></i> <h3>PROGRAMMING</h3></div>
+                    <div class="skill-tags">
+                        <span>C</span> <span>C++</span> <span>Python</span> <span>Java</span> <span>HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-header"><i data-lucide="video"></i> <h3>CREATIVE SUITE</h3></div>
+                    <div class="skill-tags">
+                        <span>Premiere Pro</span> <span>DaVinci Resolve</span> <span>CapCut</span> <span>Photoshop</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-header"><i data-lucide="layers"></i> <h3>DEVELOPMENT</h3></div>
+                    <div class="skill-tags">
+                        <span>Full-Stack Web</span> <span>Game Logic</span> <span>UI/UX Design</span> <span>Database</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal-up">
+        <div class="container">
+            <span class="tag">03. CREATIONS</span>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('https://i.pinimg.com/1200x/88/6c/fa/886cfabfb3490c7af91c91f2ab9576c1.jpg')"></div>
+                    <div class="project-info">
+                        <h3>Cyber-Runner Engine</h3>
+                        <p>A high-performance game logic system built with C++.</p>
+                        <div class="proj-tags"><span>C++</span> <span>GAME_DEV</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('https://i.pinimg.com/736x/62/4c/5a/624c5a9dd1fdba135a165e263bded442.jpg')"></div>
+                    <div class="project-info">
+                        <h3>Cinematic Gaming Montage</h3>
+                        <p>Advanced video editing with motion graphics and color grading.</p>
+                        <div class="proj-tags"><span>DAVINCI</span> <span>EDITING</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('https://i.pinimg.com/1200x/46/37/7a/46377ab86d12f8b44648447337b8ce41.jpg')"></div>
+                    <div class="project-info">
+                        <h3>Dynamic Web Portal</h3>
+                        <p>Full-stack application with real-time database integration.</p>
+                        <div class="proj-tags"><span>FLASK</span> <span>SQLITE</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal-up">
+        <div class="container">
+            <span class="tag">04. SIGNAL</span>
+            <div class="contact-flex">
+                <div class="form-side">
+                    <form id="contactForm">
+                        <div class="input-row">
+                            <input type="text" id="name" placeholder="YOUR NAME" required>
+                            <input type="email" id="email" placeholder="YOUR EMAIL" required>
+                        </div>
+                        <textarea id="message" placeholder="YOUR MESSAGE" required></textarea>
+                        <button type="submit" id="submitBtn">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div class="feed-side">
+                    <div class="terminal">
+                        <div class="term-head">RECENT_MESSAGES_DB</div>
+                        <div id="messageFeed" class="term-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 S PRITAM // BCA SEM-2 // BUILT WITH FLASK & SQLITE</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Handle Form Submission and Frontend Feed Update
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevents page reload to keep the feed entries visible
+            
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const feed = document.getElementById('messageFeed');
+            
+            // Create terminal entry element
+            const entry = document.createElement('div');
+            entry.style.marginBottom = '15px';
+            entry.style.borderLeft = '2px solid #00f3ff';
+            entry.style.paddingLeft = '10px';
+            entry.style.animation = 'revealUp 0.5s ease forwards';
+            
+            // Get current time for the log
+            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            
+            entry.innerHTML = `
+                <div style="color: #00f3ff; font-weight: bold; font-size: 0.8rem; font-family: 'JetBrains Mono', monospace;">
+                    [${time}] ${name.toUpperCase()} >>
+                </div>
+                <div style="color: rgba(255,255,255,0.8); font-style: italic; margin-top: 5px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">
+                    "${message}"
+                </div>
+            `;
+            
+            // Add the new message to the top of the feed
+            feed.insertBefore(entry, feed.firstChild);
+            
+            // Show the success popup
+            document.getElementById('successPopup').classList.remove('hidden');
+            
+            // Reset the form fields
+            this.reset();
+
+            // Note: Since your backend is "perfectly fine", ensure your script.js 
+            // handles the actual database POST request via fetch() if you are using AJAX.
+        });
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('successPopup').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
