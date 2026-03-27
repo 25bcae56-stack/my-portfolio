@@ -1,0 +1,21 @@
+name: Flask CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Check for Syntax Errors
+        run: |
+          python -m compileall .
